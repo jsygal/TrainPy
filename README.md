@@ -1,3 +1,5 @@
-# pythonBegin
-This is the startup training in Python @IBM
-Testing Commit
+Training Sesions @ IBM
+Python
+  - Exercices
+  - Mini Projects
+GoLang
