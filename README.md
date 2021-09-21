@@ -1,5 +1,7 @@
 Training Sesions @ IBM
-Python
+
+> Python
   - Exercices
   - Mini Projects
-GoLang
+
+> GoLang
