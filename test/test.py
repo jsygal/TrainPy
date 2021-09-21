@@ -40,11 +40,9 @@ def contInput():
         if (contIn=='n' or contIn=='N'):
             inputDate()
         else:
-            print("Please enter requested reply.\n")
             try:
                 contInput()
             except:
-                print("Please enter requested reply.\n")
                 contInput()
 
 def main():
