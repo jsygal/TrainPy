@@ -1,0 +1,20 @@
+To: Jishnu Sygal <jishnu.sygal@gmail.com>
+From: Jishnu Sygal <jishnu.sygal@gmail.com>
+Subject: Test Email 
+
+Hi All, 
+
+ 
+
+This is a test email with some of the attachments.
+
+This can be used to parse the email and its attachments to PDF.
+
+ 
+
+Regards, 
+Jishnu Sygal
+
+Attachments:
+Attachment 1: GFG.pdf
+Attachment 2: file.txt
