@@ -117,9 +117,9 @@ def main():
         writer.writeheader()
         data = scrape(url)
         print (data)
-        if data:
+        '''if data:
             for h in data['Listing']:
-                writer.writerow(h)
+                writer.writerow(h)'''
 
 if __name__ == "__main__":
     main()
