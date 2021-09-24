@@ -1,5 +1,5 @@
 Listing:
-    css: div.listingCardWrap
+    css: 'div.fli-list div.listingCard'
     xpath: null
     multiple: true
     type: Text
