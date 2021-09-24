@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 
-''' 
-REQUIREMENT:
-5.	Download the video from url if it is available.
-'''
-
 from pytube import YouTube
 
 def banner():

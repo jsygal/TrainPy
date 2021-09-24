@@ -1,7 +1,4 @@
 import os
-import sys
-import mimetypes
-import email
 from email import policy
 from email.parser import BytesParser
 from fpdf import FPDF

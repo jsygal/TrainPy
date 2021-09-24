@@ -1,0 +1,4 @@
+numpy
+TfidfVectorizer
+cosine_similarity
+warnings
