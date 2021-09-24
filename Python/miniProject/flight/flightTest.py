@@ -105,7 +105,6 @@ def main():
             "depart",
             "arrive",
             "price",
-            "room_type",
             "travel",
             "stops"
         ]
