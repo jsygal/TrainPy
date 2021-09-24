@@ -10,6 +10,8 @@ from datetime import date
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 e = Extractor.from_yaml_file(__location__+'/keys.yml')
 
+print (e)
+
 def inputDate(inDate):
     '''Input the date for search'''
     format='%d/%m/%Y'
@@ -78,18 +80,21 @@ def scrape(url):
     headers = {
         'Connection': 'keep-alive',
         'Pragma': 'no-cache',
-        'Cache-Control': 'no-cache',
+        'Cache-Control': 'no-cache, , max-age=0, must-revalidate, no-store',
         'DNT': '1',
         'Upgrade-Insecure-Requests': '1',
         # You may want to change the user agent if you get blocked
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.113 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'Accept-encoding': 'gzip, deflate, br',
+        'Accept-language': 'en-GB,en-US;q=0.9,en;q=0.8,',
+        'Referer': 'https://www.makemytrip.com/'
     }
 
     # Download the page using requests
     print("Downloading %s"%url)
     r = requests.get(url, headers=headers)
+    print (r)
     #r = requests.get(url)
     # Pass the HTML of the page and create 
     return e.extract(r.text,base_url=url)
