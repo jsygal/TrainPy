@@ -111,8 +111,9 @@ def main():
         writer = csv.DictWriter(outfile, fieldnames=fieldnames,quoting=csv.QUOTE_ALL)
         writer.writeheader()
         data = scrape(url)
+        print (data)
         if data:
-            for h in data['flight']:
+            for h in data['Listing']:
                 writer.writerow(h)
 
 if __name__ == "__main__":

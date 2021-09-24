@@ -1,22 +1,36 @@
-flight:
-    css: div.fli-list
+Listing:
+    css: div.listingCardWrap
+    xpath: null
     multiple: true
     type: Text
     children:
         name:
-            css: span.airlineName
-            type: Text
-        depart:
-            css: p.blackText.fontSize18.blackFont.appendBottom2.makeFlex.hrtlCenter
+            css: 'div.fli-list.simpleow span.boldFont.blackText.airlineName'
+            xpath: null
+            multiple: true
             type: Text
         arrive:
-            css: p.blackText.fontSize18.blackFont.appendBottom2.makeFlex.hrtlCenter
+            css: 'div.fli-list.simpleow div.flightTimeSection.timeInfoRight p.blackText span'
+            xpath: null
+            multiple: true
+            type: Text
+        depart:
+            css: 'div.fli-list.simpleow div.flightTimeSection.timeInfoLeft span'
+            xpath: null
+            multiple: true
             type: Text
         price:
-            css: p.blackText.fontSize18.blackFont.white-space-no-wrap
+            css: 'div.fli-list.simpleow div.textRight.flexOne p.blackText'
+            xpath: null
+            multiple: true
             type: Text
-        travel: 
-            css: div.stop-info.flexOne
+        travel:
+            css: 'div.fli-list div.stop-info > p'
+            xpath: null
+            multiple: true
             type: Text
-        stops: 
-            css: p.flightsLayoverInfo
+        stops:
+            css: 'div.fli-list.simpleow p.flightsLayoverInfo'
+            xpath: null
+            multiple: true
+            type: Text
