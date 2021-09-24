@@ -1,0 +1,22 @@
+flight:
+    css: div.fli-list
+    multiple: true
+    type: Text
+    children:
+        name:
+            css: span.airlineName
+            type: Text
+        depart:
+            css: p.blackText.fontSize18.blackFont.appendBottom2.makeFlex.hrtlCenter
+            type: Text
+        arrive:
+            css: p.blackText.fontSize18.blackFont.appendBottom2.makeFlex.hrtlCenter
+            type: Text
+        price:
+            css: p.blackText.fontSize18.blackFont.white-space-no-wrap
+            type: Text
+        travel: 
+            css: div.stop-info.flexOne
+            type: Text
+        stops: 
+            css: p.flightsLayoverInfo

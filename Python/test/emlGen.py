@@ -9,7 +9,6 @@ from html.parser import HTMLParser
 
 h = html.parser
 
-html_data = 
 
 msg = MIMEMultipart('alternative')
 msg['Subject'] = ...

@@ -1,9 +1,8 @@
-#Meet Robo: your friend
-
 #import necessary libraries
 import io
+import os
 import random
-import string # to process standard python strings
+import string 
 import warnings
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -19,12 +18,12 @@ nltk.download('popular', quiet=True) # for downloading packages
 #nltk.download('punkt') # first-time use only
 #nltk.download('wordnet') # first-time use only
 
-
-#Reading in the corpus
-with open('/Users/jishnusygal/VSCode/myCode/pythonBegin/test/chatbot.txt','r', encoding='utf8', errors ='ignore') as fin:
+#Reading in the file
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+with open(__location__+'/chatbot.txt','r', encoding='utf8', errors ='ignore') as fin:
     raw = fin.read().lower()
 
-#TOkenisation
+#Tokenisation
 sent_tokens = nltk.sent_tokenize(raw)# converts to list of sentences 
 word_tokens = nltk.word_tokenize(raw)# converts to list of words
 
@@ -39,7 +38,7 @@ def LemNormalize(text):
 
 # Keyword Matching
 GREETING_INPUTS = ("hello", "hi", "greetings", "sup", "what's up","hey",)
-GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me"]
+GREETING_RESPONSES = ["hi", "hey", "*nods*", "hi there", "hello", "I am glad! You are talking to me", "I'm JISH your IBM Chat Assistant."]
 
 def greeting(sentence):
     """If user's input is a greeting, return a greeting response"""

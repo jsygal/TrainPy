@@ -3,17 +3,26 @@ import calendar
 import datetime
 import time
 from datetime import datetime
+from datetime import date
 
 def inputDate():
     '''Input the date for search'''
     sDate=input("Please enter the date in which the flights are to be searched [DD-MM-YYYY]:")
     format='%d-%m-%Y'
-    sDate=datetime.strptime(sDate,format)
+    try:
+        sDate=datetime.strptime(sDate,format)
+    except:
+        print("Date is not in desired format [DD-MM-YYYY]")
+        contInput()
     day=sDate.day
     monthNum=str(sDate.month)
     datetime_object = datetime.strptime(monthNum, "%m")
     month_name = datetime_object.strftime("%b")
     year=sDate.year
+    today=datetime.today()
+    if sDate < today:
+        print("Selected a future date for booking.")
+        contInput()
     chkDay=day%10
     if chkDay==1:
         print("The date entered is {}st day of {} in {}. \n".format(day,month_name,year))
@@ -29,24 +38,32 @@ def inputDate():
             else:
                 print("The date entered is {}th day of {} in {}. \n".format(day,month_name,year))
                 contInput()
+    #day=f"{day:02d}"
+    #monthNum=f"{int(monthNum):02d}"
+    return str(day), str(monthNum), str(year)
 
 def contInput():
     '''Check to Continue'''
-    contInput=input("Press [y/Y] to continue or [n/N] to reneter the date:")
+    contInput=input("Press [c/C] to continue or [q/Q] to exit or [r/R] to reneter the date:")
     contIn=str(contInput)
-    if (contIn=='y' or contIn=='Y'):
+    if (contIn=='q' or contIn=='Q'):
         exit()
     else:
-        if (contIn=='n' or contIn=='N'):
+        if (contIn=='r' or contIn=='R'):
             inputDate()
         else:
-            try:
-                contInput()
-            except:
-                contInput()
+            if (contIn=='c' or contIn=='C'):
+                return
+            else:
+                try:
+                   contInput()
+                except:
+                    contInput()
 
 def main():
-        inputDate()
+        cDate,cMonth,Year=inputDate()
+        print (cDate)
+        
 
 #Invoke main function
 if __name__=="__main__":
